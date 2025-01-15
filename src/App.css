@@ -1,0 +1,104 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+}
+
+button:hover {
+  cursor: pointer }
+
+.coin { height: 100px; width: 100px; border-radius: 100px; font-weight: bold; letter-spacing: 5px }
+
+.dice { 
+  /* border: 2px solid black; */
+  box-shadow: 0px 0px 5px 5px black;
+  display: flex;
+  height: 75px }
+
+.dice button {
+  width: 80px;
+  background-color: black;
+  box-shadow: 0px 0px 5px 5px gold;
+  margin-right: 10px;
+  color: white;
+  font-family: Impact;
+  letter-spacing: 2px;
+}
+
+.diceRange{
+  color: gold;
+  accent-color: gold;
+  background-color: white;
+}
+
+.dice p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 10px;
+}
+
+.dice p input { 
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+}
+
+.diceRange {
+  width: 250px;
+}
+
+table {
+  border: 2px solid black;
+  width: 30vw;
+  height: auto;
+  text-align: center }
+
+#name {
+  line-height: 2;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: Impact;
+  text-align: center }
+
+.quickLife {
+  border: none;
+  font-size: 25px;
+  width: 100px;
+  height: 100% }
+
+.softLifeBtn {
+  position: relative;
+  width: 13%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid black }
+
+.submitSoftLife {
+  border-radius: 100px;
+  height: 60px;
+  width: 75px }
+
+#life {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) }
+
+.qlneg { background-image: linear-gradient(to left, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) }
+
+.qlpos { background-image: linear-gradient(to right, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
