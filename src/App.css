@@ -1,16 +1,31 @@
+:root { overflow-y: hidden; --background: rgba(16,53,127,0.916); --faded: rgba(170,170,170,0.2) }
+
 .App {
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
-}
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background) }
 
-button:hover {
-  cursor: pointer }
+button:hover { cursor: pointer }
 
-.coin { height: 100px; width: 100px; border-radius: 100px; font-weight: bold; letter-spacing: 5px }
+.coin { 
+  height: 100px; 
+  width: 100px; 
+  border-radius: 100px; 
+  font-weight: bold; 
+  letter-spacing: 5px; 
+  position: absolute; 
+  border: gold solid 2px;
+  background-color: var(--faded);
+  top: 15%;
+  outline: 2px solid black;
+  outline-offset: 5px }
 
 .dice { 
-  /* border: 2px solid black; */
+  top: 70%;
   box-shadow: 0px 0px 5px 5px black;
   display: flex;
   height: 75px }
@@ -22,36 +37,25 @@ button:hover {
   margin-right: 10px;
   color: white;
   font-family: Impact;
-  letter-spacing: 2px;
-}
+  letter-spacing: 2px }
 
-.diceRange{
-  color: gold;
-  accent-color: gold;
-  background-color: white;
-}
+.diceRange { accent-color: gold }
 
 .dice p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0px 10px;
-}
+  margin: 0px 10px }
 
-.dice p input { 
-  font-weight: bold;
-  width: 30px;
-  height: 30px;
-}
+.dice p input { font-weight: bold; width: 50px; height: 30px }
 
-.diceRange {
-  width: 250px;
-}
+.diceRange { width: 250px }
 
 table {
-  border: 2px solid black;
+  border: 5px solid black;
   width: 30vw;
+  margin: 5px;
   height: auto;
   text-align: center }
 
@@ -62,23 +66,47 @@ table {
   font-family: Impact;
   text-align: center }
 
+.playerboard { position: absolute; top: 50%; transform: translateY(-50%) }
+
+.pboard1 { left: 0 }
+
+.pboard2 { right: 0 }
+
 .quickLife {
   border: none;
   font-size: 25px;
   width: 100px;
+  background-color: var(--faded);
+  border-radius: 100px;
+  margin: 2px;
   height: 100% }
+
+.resetLife {
+  position: absolute;
+  border: 2px solid red;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 10% }
 
 .softLifeBtn {
   position: relative;
   width: 13%;
   height: 40px;
   box-sizing: border-box;
+  font-weight: bold;
   border: 2px solid black }
 
-.submitSoftLife {
-  border-radius: 100px;
-  height: 60px;
-  width: 75px }
+.softNeg { background-image: linear-gradient(to left, rgb(254, 94, 94), red); border: darkred 1px solid }
+
+.SoftNeg { background-image: linear-gradient(to left, red, darkred); border: darkred 1px solid }
+
+.softPos { background-image: linear-gradient(to right, rgb(78, 233, 78), green); border: darkgreen 1px solid }
+
+.SoftPos { background-image: linear-gradient(to right, green, darkgreen); border: darkgreen 1px solid }
+
+.submitSoftLife { border-radius: 100px; height: 60px; width: 75px }
 
 #life {
   width: 100%;
@@ -88,17 +116,11 @@ table {
   height: 100px;
   position: relative;
   left: 50%;
+  font-size: 50px;
+  font-weight: bold;
   transform: translateX(-50%) }
-
+/* 
 .qlneg { background-image: linear-gradient(to left, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) }
 
-.qlpos { background-image: linear-gradient(to right, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) }
+.qlpos { background-image: linear-gradient(to right, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) } */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

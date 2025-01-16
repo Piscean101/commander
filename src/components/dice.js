@@ -12,10 +12,9 @@ function Dice() {
         <button onClick={() => {handleDice(rollCount)}}>Roll d{roll}</button>
         <input className="diceRange" type="range" min="6" max="20" defaultValue="6" onChange={(e) => setRoll(e.target.value)}></input>
         <p>
-            <input type="number" min="1" max="9" defaultValue="1" onChange={(e) => {setRollCount(e.target.value)}}></input>
+            <input type="number" min="1" max="20" defaultValue="1" onChange={(e) => {setRollCount(e.target.value)}}></input>
             Time(s)
         </p>
-        <p>{rollCount} rollcount</p>
         </div>
     )
 }
