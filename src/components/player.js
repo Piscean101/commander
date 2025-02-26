@@ -40,6 +40,9 @@ function Player(props) {
         </div>
             </td>
         </tr>
+        <tr>
+            <td><p className="cmdmglabel">Commander Damage</p><input type="number" min="0" max="99" className="cmdmg" defaultValue="0"></input></td>
+        </tr>
         </table>
         </>
     )

@@ -1,12 +1,20 @@
 import './App.css';
-// import { useState, useEffect, useSearchParams } from 'react'; 
+// import { useState } from 'react'; 
 import Player from './components/player.js';
 // import Header from './components/header.js';
 import Coin from './components/coin.js';
 import Dice from './components/dice.js';
+// import VotePage from './components/votePage.js';
+// import { useEffect } from 'react';
 
 function App() {
   var start = 40;
+  // var display = {
+  //   display: 'none',
+  // }
+  // function handleDisplay(display) {
+  //   display.display === 'none' ? display.display = 'flex' : display.display = 'none';
+  // }
   return (
     <div className="App">
 
@@ -26,6 +34,8 @@ function App() {
       </div>
       <Coin />
       <Dice />
+      {/* <button onClick={() => {handleDisplay(display)}}>VOTE</button> */}
+      {/* <VotePage style={display}/> */}
     </div>
   );
 }

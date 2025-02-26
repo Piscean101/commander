@@ -1,4 +1,8 @@
-:root { overflow-y: hidden; --background: rgba(16,53,127,0.916); --faded: rgba(170,170,170,0.2) }
+:root { 
+  overflow-y: hidden; 
+  --lightgrey: rgba(0,0,0,0.2);
+  --background: rgba(16,53,127,0.916); 
+  --faded: rgba(170,170,170,0.2) }
 
 .App {
   display: flex;
@@ -10,6 +14,21 @@
   background-color: var(--background) }
 
 button:hover { cursor: pointer }
+  
+.pboard1 { left: 0 } .pboard2 { right: 0 } .playerboard { position: absolute ; top: 50% ; transform: translateY(-50%) }
+.dice p input { font-weight: bold ; width: 50px ; height: 30px } .diceRange { width: 250px ; accent-color: gold }
+
+input[type="number"] { max-width: 75px ; font-weight: bold ; padding: 15px ; font-size: 15px }
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { transform: scale(3) }
+
+.cmdmglabel { 
+  position: relative;
+  display: inline;
+  margin-right: 15px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 2px var(--lightgrey) }
 
 .coin { 
   height: 100px; 
@@ -39,18 +58,12 @@ button:hover { cursor: pointer }
   font-family: Impact;
   letter-spacing: 2px }
 
-.diceRange { accent-color: gold }
-
 .dice p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 0px 10px }
-
-.dice p input { font-weight: bold; width: 50px; height: 30px }
-
-.diceRange { width: 250px }
 
 table {
   border: 5px solid black;
@@ -65,12 +78,6 @@ table {
   letter-spacing: 5px;
   font-family: Impact;
   text-align: center }
-
-.playerboard { position: absolute; top: 50%; transform: translateY(-50%) }
-
-.pboard1 { left: 0 }
-
-.pboard2 { right: 0 }
 
 .quickLife {
   border: none;
@@ -123,4 +130,10 @@ table {
 .qlneg { background-image: linear-gradient(to left, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) }
 
 .qlpos { background-image: linear-gradient(to right, white, rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.5)) } */
+
+/* .votepage {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: white } */
 
