@@ -1,11 +1,8 @@
 import './App.css';
-// import { useState } from 'react'; 
 import Player from './components/player.js';
-// import Header from './components/header.js';
 import Coin from './components/coin.js';
 import Dice from './components/dice.js';
 // import VotePage from './components/votePage.js';
-// import { useEffect } from 'react';
 
 function App() {
   var start = 40;

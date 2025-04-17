@@ -6,7 +6,8 @@ function Dice() {
         let hold = new Array(Math.abs(rollCount)).fill();
         let result = hold.map((e,i) => {return Math.ceil(Math.random()*roll)});
         alert(`The result of the dice roll is:\n${result.join('...')}`);
-    }
+        console.log(`The result of the dice roll is:\n${result.join('...')}`);
+   }
     return(
         <div className="dice">
         <button onClick={() => {handleDice(rollCount)}}>Roll d{roll}</button>

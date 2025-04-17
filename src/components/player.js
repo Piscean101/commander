@@ -1,24 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import hp from './hp.png';
 
 function Player(props) {
     var [life,setLife] = useState(props.start);
     var [softLife,setSoftLife] = useState(0);
+    var [name, setName] = useState(props.name);
+    useEffect(() => { console.log(`Total Health:`, life) },[life])
     function handleLife(val) {
         setLife((e) => e += val);
+        val >= 0 ? console.log(`Increased ${name}'s health by ${val}`) : console.log(`Reduced ${name}'s health by ${val}`);
     }
     function handleSoftLife(val) {
         setSoftLife((e) => e += val);
     }
     function updateLife() {
-        setLife((e) => e += softLife);
+        handleLife(softLife);
         setSoftLife(0);
+    }
+    function saveName(name) {
+        setName(name)
     }
     return(
         <>
         <table>
+            <tbody>
             <tr>
-                <td><input id="name" type="text" maxLength="15" placeholder={props.name}></input></td>
+                <td><input id="name" type="text" maxLength="15" placeholder={name} onChange={(e) => {saveName(e.target.value)}}></input></td>
             </tr>
             <tr>
                 <td id="life">
@@ -43,6 +50,7 @@ function Player(props) {
         <tr>
             <td><p className="cmdmglabel">Commander Damage</p><input type="number" min="0" max="99" className="cmdmg" defaultValue="0"></input></td>
         </tr>
+        </tbody>
         </table>
         </>
     )
