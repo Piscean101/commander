@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/piscean101.github.io/commander/static/css/main.b4a47bea.css",
+    "main.js": "/piscean101.github.io/commander/static/js/main.75591c0b.js",
+    "index.html": "/piscean101.github.io/commander/index.html",
+    "main.b4a47bea.css.map": "/piscean101.github.io/commander/static/css/main.b4a47bea.css.map",
+    "main.75591c0b.js.map": "/piscean101.github.io/commander/static/js/main.75591c0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4a47bea.css",
+    "static/js/main.75591c0b.js"
+  ]
+}
